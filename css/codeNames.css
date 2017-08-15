@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Xenophobia';
+    src: url('../graphics/Xenophobia nominal.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Seedy';
+    src: url('../graphics/Seedy Motel DEMO.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Americana';
+    src: url('../graphics/Air Americana.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:black;
+	margin:0;
+	padding:0;
+}
+
+.topBar{
+	margin:5px;
+	vertical-align:middle;
+	display:inline-block;
+	color:red;
+}
+
+h1{
+	color:red;
+	font-family: "Seedy";
+}
+
+#gameId{
+	color:red;
+}
+
+/*************************************** GAME CONTROLS ***********************************/
+#controls{
+	color:red;
+	position:fixed;
+	left:10px;
+	width:25px;
+	margin-top:3px;
+}
+
+.controlOption{
+	position:relative;
+	display:inline-block;
+	margin-bottom:10px;
+}
+
+.controlOption:hover{
+	cursor:pointer;
+}
+
+.controlOption img{
+	height:20px;
+	width:20px;
+}
+
+.controlOption img:hover{
+	opacity:.5;
+}
+
+
+
+/**************************************GRID LAYOUT ***********************/
+#game{
+	margin:auto;
+	width:100%;
+	cursor:pointer;
+}
+
+#grid{
+	width:calc(99% - 40px);
+	margin:0 1% 0 40px;
+}
+
+.row{
+	height:20%;
+}
+
+.box{
+	position:relative;
+	margin:0;
+	border:1px solid black;
+	float:left;
+	background-image:url("../graphics/Tan card.jpg");
+	background-size:cover;
+	background-position:center center;
+	width:calc(20% - 2px);
+	height:100%;
+	overflow:hidden;
+}
+
+.text{
+	z-index:2;
+	font-family:Americana;
+	color:black;
+	position:absolute;
+	top:50%;
+	transform:translateY(-35%);
+	width:100%;
+	text-align:center;
+	font-size:2em;
+}
+
+.background{
+	position:absolute;
+	z-index:1;
+	opacity:0;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-size:cover;
+}

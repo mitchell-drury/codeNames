@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<title>Code Names</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		
+		<link rel="stylesheet" type="text/css" href="css/codeNames.css" media="(min-width:601px)">
+		<link rel="stylesheet" type="text/css" href="css/codeNamesSmall.css" media="(max-width:600px)">
+
+		<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>	
+		<script src="js/codeNames.js" type="text/javascript" ></script>
+		<script>
+			$(document).ready(function(){
+				createGrid(5);
+				setButtons();
+				fillGrid(5);
+				window.addEventListener("resize", redrawGrid);
+			});
+		</script>
+		
+			
+	</head>
+	
+	<body>
+		<div id="title">
+			<h1 class="topBar">Code Names</h1>
+			<div id="gameId" class="topBar""></div>
+			<div class="topBar">Spymasters go to: "www.MitchellDrury.com/codeNames/spyView.php" and enter game ID.</div>
+		</div>
+		<div id="game">
+			<div id="controls">
+				<div class="controlOption w3-tooltip" id="fillGrid"><img src="graphics/whiteGrid.png" title="Reset the grid"></div>
+				<div class="controlOption w3-tooltip" id="fullScreen"><img src="graphics/fullscreen.png" title="Fullscreen"></div>
+				<div class="controlOption w3-tooltip" id="basicTimer"><img src="graphics/hourglass.png" title="1 minute timer"><span id="timeLeft"></span></div>
+				<div class="controlOption w3-tooltip" id="enterSpyMode"><img src="graphics/eye.png" title="Enter Spy View"></div>
+				<div class="controlOption w3-tooltip" id="exitSpyMode"><img src="graphics/people.png" title="Exit Spy View"></div>
+				<div class="controlOption w3-tooltip" id="revealGrid"><img src="graphics/lock.png" title="Reveal Grid"></div>
+			</div>
+			
+			<div id="grid">
+			</div>
+		</div>
+
+	</body>
+</html>
